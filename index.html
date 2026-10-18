@@ -74,20 +74,6 @@ section { padding:6rem 2rem; }
 .value-number { font-family:'Cormorant Garamond',serif; font-size:2.5rem; color:var(--gold); line-height:1; }
 .value-label { font-size:0.75rem; letter-spacing:2px; font-weight:400; text-transform:uppercase; color:var(--cement-light); margin-top:0.3rem; }
 
-/* MENU */
-#menu { background:var(--off-white); }
-.menu-categories { display:flex; gap:1rem; margin:2rem 0 3rem; flex-wrap:wrap; }
-.menu-cat-btn { padding:8px 24px; border:1px solid var(--cement-light); background:transparent; font-family:'Jost',sans-serif; font-size:0.8rem; letter-spacing:2px; font-weight:400; text-transform:uppercase; color:var(--cement); cursor:pointer; transition:all 0.3s ease; }
-.menu-cat-btn.active,.menu-cat-btn:hover { border-color:var(--gold); color:var(--gold); background:rgba(201,169,110,0.05); }
-.menu-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; }
-.menu-card { background:var(--white); padding:2rem; border:1px solid rgba(0,0,0,0.04); transition:all 0.4s ease; position:relative; overflow:hidden; }
-.menu-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform 0.4s ease; }
-.menu-card:hover::before { transform:scaleX(1); }
-.menu-card:hover { box-shadow:0 8px 30px rgba(0,0,0,0.06); }
-.menu-card-icon { font-size:1.8rem; margin-bottom:1rem; }
-.menu-card h3 { font-size:1.4rem; margin-bottom:0.8rem; }
-.menu-card p { font-size:0.9rem; color:var(--text-light); line-height:1.6; font-weight:400; }
-
 /* GALLERY */
 #galleria { background:var(--white); }
 .gallery-filters { display:flex; gap:0.8rem; margin:2rem 0 2.5rem; flex-wrap:wrap; justify-content:center; }
@@ -160,7 +146,6 @@ footer a { color:var(--gold-light); text-decoration:none; }
   section { padding:4rem 1.5rem; }
   .hero-logo { width:150px; }
   .about-values { flex-direction:column; gap:1.5rem; }
-  .menu-grid { grid-template-columns:1fr; }
   .lightbox-img { max-width:95vw; }
   .lightbox-nav { font-size:1.8rem; }
 }
@@ -282,9 +267,6 @@ footer a { color:var(--gold-light); text-decoration:none; }
 </section>
 
 
-</section>
-
-
 <section id="come-ordinare">
   <div class="container">
     <div class="reveal" style="text-align:center;">
@@ -342,7 +324,7 @@ footer a { color:var(--gold-light); text-decoration:none; }
       <button class="filter-btn" onclick="filterGallery('moderne')">Creazioni Moderne</button>
       <button class="filter-btn" onclick="filterGallery('classiche')">Classiche</button>
     </div>
-    <p class="gallery-count reveal" id="galleryCount">31 creazioni</p>
+    <p class="gallery-count reveal" id="galleryCount">46 creazioni</p>
     <div class="gallery-mosaic reveal" id="galleryMosaic">
       <div class="gallery-item" data-cat="compleanni" data-idx="0" onclick="openLightbox(0)">
         <img src="images/noemi.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
@@ -422,110 +404,200 @@ footer a { color:var(--gold-light); text-decoration:none; }
           <span class="gallery-cat-badge">Compleanni</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="cerimonie" data-idx="13" onclick="openLightbox(13)">
+      <div class="gallery-item" data-cat="compleanni" data-idx="13" onclick="openLightbox(13)">
+        <img src="images/auguri_mamma_nonna.jpg" alt="Torta Auguri mamma e nonna con fiori" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Compleanni</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="compleanni" data-idx="14" onclick="openLightbox(14)">
+        <img src="images/piera_cavallo.jpg" alt="Torta Tanti auguri Piera con cialda a cavallo" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Compleanni</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="compleanni" data-idx="15" onclick="openLightbox(15)">
+        <img src="images/tantissimi_auguri_azzurra.jpg" alt="Torta Tantissimi auguri azzurra" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Compleanni</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="compleanni" data-idx="16" onclick="openLightbox(16)">
+        <img src="images/nicola_azzurra.jpg" alt="Torta Tanti auguri Nicola azzurra e oro" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Compleanni</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="compleanni" data-idx="17" onclick="openLightbox(17)">
+        <img src="images/frutti_bosco_auguri.jpg" alt="Torta Tanti auguri con mirtilli e ribes" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Compleanni</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="compleanni" data-idx="18" onclick="openLightbox(18)">
+        <img src="images/auguri_nonna_bianca.jpg" alt="Torta Tanti auguri nonna bianca e oro" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Compleanni</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="compleanni" data-idx="19" onclick="openLightbox(19)">
+        <img src="images/cuore_15.jpg" alt="Torta a cuore 15 con fiocchi dorati" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Compleanni</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="compleanni" data-idx="20" onclick="openLightbox(20)">
+        <img src="images/auguri_oro.jpg" alt="Torta Auguri bianca con sfere dorate" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Compleanni</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="compleanni" data-idx="21" onclick="openLightbox(21)">
+        <img src="images/tanti_auguri_rosa.jpg" alt="Torta Tanti auguri rosa e oro" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Compleanni</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="cerimonie" data-idx="22" onclick="openLightbox(22)">
         <img src="images/battesimo_gianluca.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Cerimonie</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="cerimonie" data-idx="14" onclick="openLightbox(14)">
+      <div class="gallery-item" data-cat="cerimonie" data-idx="23" onclick="openLightbox(23)">
         <img src="images/laurea_federico.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Cerimonie</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="cerimonie" data-idx="15" onclick="openLightbox(15)">
+      <div class="gallery-item" data-cat="cerimonie" data-idx="24" onclick="openLightbox(24)">
         <img src="images/battesimo_antonio_safari.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Cerimonie</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="cerimonie" data-idx="16" onclick="openLightbox(16)">
+      <div class="gallery-item" data-cat="cerimonie" data-idx="25" onclick="openLightbox(25)">
         <img src="images/comunione_azzurra.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Cerimonie</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="cerimonie" data-idx="17" onclick="openLightbox(17)">
+      <div class="gallery-item" data-cat="cerimonie" data-idx="26" onclick="openLightbox(26)">
         <img src="images/comunione_foglie.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Cerimonie</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="cerimonie" data-idx="18" onclick="openLightbox(18)">
+      <div class="gallery-item" data-cat="cerimonie" data-idx="27" onclick="openLightbox(27)">
         <img src="images/battesimo_emma.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Cerimonie</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="nuziali" data-idx="19" onclick="openLightbox(19)">
+      <div class="gallery-item" data-cat="cerimonie" data-idx="28" onclick="openLightbox(28)">
+        <img src="images/auguri_dottoressa.jpg" alt="Torta di laurea Auguri Dottoressa rossa e oro" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Cerimonie</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="cerimonie" data-idx="29" onclick="openLightbox(29)">
+        <img src="images/laurea_corona_frutti.jpg" alt="Torta di laurea con corona di alloro e frutti di bosco" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Cerimonie</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="nuziali" data-idx="30" onclick="openLightbox(30)">
         <img src="images/nozze_rosse.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Nuziali</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="nuziali" data-idx="20" onclick="openLightbox(20)">
+      <div class="gallery-item" data-cat="nuziali" data-idx="31" onclick="openLightbox(31)">
         <img src="images/nozze_rs.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Nuziali</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="nuziali" data-idx="21" onclick="openLightbox(21)">
+      <div class="gallery-item" data-cat="nuziali" data-idx="32" onclick="openLightbox(32)">
         <img src="images/nozze_am.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Nuziali</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="nuziali" data-idx="22" onclick="openLightbox(22)">
+      <div class="gallery-item" data-cat="nuziali" data-idx="33" onclick="openLightbox(33)">
         <img src="images/nozze_rose_bianche.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Nuziali</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="moderne" data-idx="23" onclick="openLightbox(23)">
+      <div class="gallery-item" data-cat="nuziali" data-idx="34" onclick="openLightbox(34)">
+        <img src="images/rose_bianche_eleganti.jpg" alt="Torta bianca elegante con rose bianche" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Nuziali</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="moderne" data-idx="35" onclick="openLightbox(35)">
         <img src="images/cioccolato_foglie.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Creazioni Moderne</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="moderne" data-idx="24" onclick="openLightbox(24)">
+      <div class="gallery-item" data-cat="moderne" data-idx="36" onclick="openLightbox(36)">
         <img src="images/rossa_pieghe.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Creazioni Moderne</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="classiche" data-idx="25" onclick="openLightbox(25)">
+      <div class="gallery-item" data-cat="moderne" data-idx="37" onclick="openLightbox(37)">
+        <img src="images/drip_rose_rosse.jpg" alt="Torta drip al cioccolato con rose rosse" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Creazioni Moderne</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="moderne" data-idx="38" onclick="openLightbox(38)">
+        <img src="images/plissettata_rose_fucsia.jpg" alt="Torta plissettata bianca con rose fucsia" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Creazioni Moderne</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="classiche" data-idx="39" onclick="openLightbox(39)">
         <img src="images/ciambella_choc.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Classiche</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="classiche" data-idx="26" onclick="openLightbox(26)">
+      <div class="gallery-item" data-cat="classiche" data-idx="40" onclick="openLightbox(40)">
         <img src="images/specchio_lampone.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Classiche</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="classiche" data-idx="27" onclick="openLightbox(27)">
+      <div class="gallery-item" data-cat="classiche" data-idx="41" onclick="openLightbox(41)">
         <img src="images/mimosa_choc.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Classiche</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="classiche" data-idx="28" onclick="openLightbox(28)">
+      <div class="gallery-item" data-cat="classiche" data-idx="42" onclick="openLightbox(42)">
         <img src="images/millefoglie.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Classiche</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="classiche" data-idx="29" onclick="openLightbox(29)">
+      <div class="gallery-item" data-cat="classiche" data-idx="43" onclick="openLightbox(43)">
         <img src="images/rosa_roselline.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Classiche</span>
         </div>
       </div>
-      <div class="gallery-item" data-cat="classiche" data-idx="30" onclick="openLightbox(30)">
+      <div class="gallery-item" data-cat="classiche" data-idx="44" onclick="openLightbox(44)">
         <img src="images/valentina.jpg" alt="Creazione Atelier delle Torte" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-cat-badge">Classiche</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="classiche" data-idx="45" onclick="openLightbox(45)">
+        <img src="images/mirtilli_panna.jpg" alt="Torta alla panna con mirtilli" loading="lazy">
         <div class="gallery-overlay">
           <span class="gallery-cat-badge">Classiche</span>
         </div>
@@ -596,16 +668,6 @@ window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.s
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');document.getElementById('navOverlay').classList.toggle('open');}
 function closeMenu(){document.getElementById('navLinks').classList.remove('open');document.getElementById('navOverlay').classList.remove('open');}
 
-// Menu filter
-function filterMenu(cat){
-  document.querySelectorAll('.menu-cat-btn').forEach(b=>b.classList.remove('active'));
-  event.target.classList.add('active');
-  document.querySelectorAll('.menu-card').forEach(c=>{
-    if(cat==='all'||c.dataset.cat===cat){c.style.display='';c.style.animation='fadeUp 0.5s ease forwards';}
-    else c.style.display='none';
-  });
-}
-
 // Gallery filter
 function filterGallery(cat){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
@@ -633,24 +695,39 @@ const lbData=[
   {src:"images/spiderman_francesco.jpg",cat:"Compleanni"},
   {src:"images/elle18.jpg",cat:"Compleanni"},
   {src:"images/cinquanta_rose.jpg",cat:"Compleanni"},
+  {src:"images/auguri_mamma_nonna.jpg",cat:"Compleanni"},
+  {src:"images/piera_cavallo.jpg",cat:"Compleanni"},
+  {src:"images/tantissimi_auguri_azzurra.jpg",cat:"Compleanni"},
+  {src:"images/nicola_azzurra.jpg",cat:"Compleanni"},
+  {src:"images/frutti_bosco_auguri.jpg",cat:"Compleanni"},
+  {src:"images/auguri_nonna_bianca.jpg",cat:"Compleanni"},
+  {src:"images/cuore_15.jpg",cat:"Compleanni"},
+  {src:"images/auguri_oro.jpg",cat:"Compleanni"},
+  {src:"images/tanti_auguri_rosa.jpg",cat:"Compleanni"},
   {src:"images/battesimo_gianluca.jpg",cat:"Cerimonie"},
   {src:"images/laurea_federico.jpg",cat:"Cerimonie"},
   {src:"images/battesimo_antonio_safari.jpg",cat:"Cerimonie"},
   {src:"images/comunione_azzurra.jpg",cat:"Cerimonie"},
   {src:"images/comunione_foglie.jpg",cat:"Cerimonie"},
   {src:"images/battesimo_emma.jpg",cat:"Cerimonie"},
+  {src:"images/auguri_dottoressa.jpg",cat:"Cerimonie"},
+  {src:"images/laurea_corona_frutti.jpg",cat:"Cerimonie"},
   {src:"images/nozze_rosse.jpg",cat:"Nuziali"},
   {src:"images/nozze_rs.jpg",cat:"Nuziali"},
   {src:"images/nozze_am.jpg",cat:"Nuziali"},
   {src:"images/nozze_rose_bianche.jpg",cat:"Nuziali"},
+  {src:"images/rose_bianche_eleganti.jpg",cat:"Nuziali"},
   {src:"images/cioccolato_foglie.jpg",cat:"Creazioni Moderne"},
   {src:"images/rossa_pieghe.jpg",cat:"Creazioni Moderne"},
+  {src:"images/drip_rose_rosse.jpg",cat:"Creazioni Moderne"},
+  {src:"images/plissettata_rose_fucsia.jpg",cat:"Creazioni Moderne"},
   {src:"images/ciambella_choc.jpg",cat:"Classiche"},
   {src:"images/specchio_lampone.jpg",cat:"Classiche"},
   {src:"images/mimosa_choc.jpg",cat:"Classiche"},
   {src:"images/millefoglie.jpg",cat:"Classiche"},
   {src:"images/rosa_roselline.jpg",cat:"Classiche"},
-  {src:"images/valentina.jpg",cat:"Classiche"}
+  {src:"images/valentina.jpg",cat:"Classiche"},
+  {src:"images/mirtilli_panna.jpg",cat:"Classiche"}
 ];
 let currentIdx=0;
 let visibleIndices=[];
